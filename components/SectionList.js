@@ -114,7 +114,7 @@ export default class SectionList extends Component {
           title={title}
         /> :
         <View
-          style={styles.item}>
+          style={[styles.item, this.props.sectionListItemStyle]}>
           <Text style={[textStyle, this.props.fontStyle]}>{title}</Text>
         </View>;
 
@@ -187,6 +187,10 @@ SectionList.propTypes = {
     PropTypes.number,
     PropTypes.object,
   ]),
+    
+  /* Section list item style */
+
+  sectionListItemStyle: PropTypes.object
 };
 
 const styles = StyleSheet.create({
